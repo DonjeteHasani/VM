@@ -1,6 +1,6 @@
 <?php
 //Initialization of some variables for maintaining database data
-$user="root";
+$user="rilinda";
 $pass="cfa4b2b5";
 $server="db4free.net";
 $dbname="volunteerapp";
