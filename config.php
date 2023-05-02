@@ -1,9 +1,9 @@
 <?php
 //Initialization of some variables for maintaining database data
 $user="root";
-$pass="";
-$server="localhost";
-$dbname="sms";
+$pass="cfa4b2b5";
+$server="db4free.net";
+$dbname="volunteerapp";
 
 try {
 	//Creating a PDO to connect with database
