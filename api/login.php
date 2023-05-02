@@ -22,7 +22,7 @@
   top: 45px;
         }
         #al,#ul{
-            /* padding-top: 60px; /
+             padding-top: 60px; /
             font-size:20px;
             background:#132347;
             color: aliceblue;
@@ -97,7 +97,7 @@ top: -4em;
     }
     @keyframes geeth {
         0% {
-            /* right: -4em; /
+            right: -4em; /
             top: 360px;
             opacity: 0;
         }
