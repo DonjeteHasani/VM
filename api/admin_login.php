@@ -232,8 +232,10 @@ padding-right: 5000px;
 						if($row['password'] == $_POST['password']){
 							$_SESSION['name'] =  $row['name'];
 							$_SESSION['email'] =  $row['email'];
-							// header("Location: admin_dashboard.php");
-							echo "<script>window.location.href='../admin_dashboard.php';</script>";
+							//header("Location: admin_dashboard.php");
+							echo "<script>window.location.href='https://vm-eight.vercel.app/api/admin_dashboard.php';</script>";
+
+
 						}
 						else{
 							?>
