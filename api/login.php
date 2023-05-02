@@ -197,7 +197,7 @@ top:265px;
     <?php
         if(isset($_POST['admin_login'])){
             // header("Location: admin_login.php");
-            echo "<script>window.location.href='/admin_login.php';";
+            echo "<script>window.location.href='https://vm-eight.vercel.app/api/admin_login.php';</script>";
         } else if(isset($_POST['student_login'])){
             header("Location: student_login.php");
         }
