@@ -157,7 +157,7 @@ b{
 	<?php
 		session_start();
 		$name = "";
-		$connection = mysqli_connect("db4free.net","rilinda","cfa4b2b5");
+		$connection = mysqli_connect("db4free.net:3306","rilinda","cfa4b2b5");
 		$db = mysqli_select_db($connection,"volunteerapp");
 	?>
 </head>
@@ -317,7 +317,7 @@ b{
 			}
 			if(isset($_POST['search_by_roll_no_for_edit']))
 			{
-				$query = "select * from students where roll_no = $_POST[roll_no]";
+				$query = "SELECT * FROM students WHERE roll_no = $_POST[roll_no]";
 				$query_run = mysqli_query($connection,$query);
 				while ($row = mysqli_fetch_assoc($query_run)) 
 				{

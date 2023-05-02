@@ -205,7 +205,7 @@ top:265px;
 			session_start();
 			if(isset($_POST['submit']))
 			{
-				$connection = mysqli_connect("db4free.net","rilinda","cfa4b2b5");
+				$connection = mysqli_connect("db4free.net:3306","rilinda","cfa4b2b5");
 		        $db = mysqli_select_db($connection,"volunteerapp");
 				$query = "select * from students where email = '$_POST[email]'";
 				$query_run = mysqli_query($connection,$query);
