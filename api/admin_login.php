@@ -232,7 +232,8 @@ padding-right: 5000px;
 						if($row['password'] == $_POST['password']){
 							$_SESSION['name'] =  $row['name'];
 							$_SESSION['email'] =  $row['email'];
-							header("Location: admin_dashboard.php");
+							// header("Location: admin_dashboard.php");
+							echo "<script>window.location.href='/admin_login.php';";
 						}
 						else{
 							?>
