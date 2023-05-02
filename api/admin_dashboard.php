@@ -157,8 +157,8 @@ b{
 	<?php
 		session_start();
 		$name = "";
-		$connection = mysqli_connect("localhost","root","");
-		$db = mysqli_select_db($connection,"sms");
+		$connection = mysqli_connect("db4free.net","rilinda","cfa4b2b5");
+		$db = mysqli_select_db($connection,"volunteerapp");
 	?>
 </head>
 <body>

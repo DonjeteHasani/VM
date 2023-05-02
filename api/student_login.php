@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin Login</title>
+	<title>Student Login</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/css/bootstrap.min.css">
   	<script type="text/javascript" src="bootstrap-4.4.1/js/juqery_latest.js"></script>
   	<script type="text/javascript" src="bootstrap-4.4.1/js/bootstrap.min.js"></script>
@@ -20,6 +20,7 @@
 			opacity: 1;
 		}
 	}
+		
 		#nav
 {
 	background: #242943;
@@ -27,7 +28,6 @@
 	width:100%;
 	line-height: 60px;
 	animation: geethu 3s ease-in-out forwards;
-	
 }
 #nav h1{
 	float: left;
@@ -40,17 +40,6 @@
 	margin-left: 25px;
 	top:10px;
 }
-@keyframes geethu {
-		0% {
-			top: -4em;
-			opacity: 0;
-		}
-
-		100% {
-			top: 0px;
-			opacity: 1;
-		}
-	}
 #nav ul{
 	float: right;
 }
@@ -70,18 +59,17 @@
 	background: aliceblue;
 	color: #132347;
 	transition: all ease-in-out 0.40s;
-}
-
-
+} 
 	  h3{
 			font-size: 50px;
 			font-family: 'Potta One', cursive;
 			color: white;
+		
 		}
 		h3{
 			position: absolute;
-  left: 420px;
-  top: 45px;
+  left: 440px;
+  top: 100px;
 		}
 		#ph{
 			/* padding-top: 60px; */
@@ -96,10 +84,8 @@
 			position:absolute;
 			top:485px;
 	        left:515px;
-			
+			animation: rahul 3s ease-in-out forwards;
 		}
-		
-
 		#ph {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -143,8 +129,7 @@ h5
 	position:absolute;
 	top:300px;
 	left:540px;
-	
-
+	animation: ra 3s ease-in-out forwards;
 }
 h6{
 	font-family: 'Potta One', cursive;
@@ -153,7 +138,7 @@ h6{
 	position:absolute;
 	top:150px;
 	left:540px;
-	
+	animation: rah 3s ease-in-out forwards;
 	
 }
 #r{
@@ -163,37 +148,34 @@ h6{
   border-radius:15px;
   width:20%;
   border: 4px solid #C6D4D0;
-  
+  animation: rahu 3s ease-in-out forwards;
 }
 #s{
 
-padding:10px;
-border:0;
-box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-border-radius:15px;
-width:20%;
-border: 4px solid #C6D4D0;
-position:absolute;
-top:360px;
-left:510px;
-
+	padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:15px;
+  width:20%;
+  border: 4px solid #C6D4D0;
+  position:absolute;
+	top:360px;
+	left:510px;
+	animation: rg 3s ease-in-out forwards;
 }
 #ig{
 position:absolute;
 top:265px;
 }
-/* #if{
-position:absolute;
-top:265px;
-padding-right: 5000px;
-} */
+#pp{
+	bottom:0px;
+}
 #qq{
 	position: absolute;
 	top: 43.5%;
 	left: 75%;
 }
-
-</style>
+		</style>
 </head>
 <body>
 <div id="nav">
@@ -211,28 +193,31 @@ padding-right: 5000px;
     </ul>
 </div>
 
-	<center>
+	<center><br><br>
 		
-		<br></br><br><br><br><br>
+		<br></br><br><br>  
 		<form action="" method="post">
-			<h6>Admin Email ID : </h6><input id="r" type="text" class="label" name="email" required><br><br><br>
-			<h5>Admin Password : </h5><input id="s" type="password" class="label" name="password" required><br><br><br><br>
-			<input id="ph" type="submit" name="submit" class="button" value="LogIn">
+			<h6>User Email ID:</h6> <input id="r" type="text" name="email" required><br><br><br>
+			<h5>User Password:</h5> <input id="s" type="password" name="password" required><br><br><br><br>
+			<input id="ph" type="submit" name="submit" value="LogIn">
 		</form><br>
-		</center>
 		<?php
 			session_start();
-			if(isset($_POST['submit'])){
-				$connection = mysqli_connect("localhost","root","");
-				$db = mysqli_select_db($connection,"sms");
-				$query = "select * from login where email = '$_POST[email]'";
+			if(isset($_POST['submit']))
+			{
+				$connection = mysqli_connect("db4free.net","rilinda","cfa4b2b5");
+		        $db = mysqli_select_db($connection,"volunteerapp");
+				$query = "select * from students where email = '$_POST[email]'";
 				$query_run = mysqli_query($connection,$query);
-				while ($row = mysqli_fetch_assoc($query_run)) {
-					if($row['email'] == $_POST['email']){
-						if($row['password'] == $_POST['password']){
+				while ($row = mysqli_fetch_assoc($query_run)) 
+				{
+					if($row['email'] == $_POST['email'])
+					{
+						if($row['password'] == $_POST['password'])
+						{
 							$_SESSION['name'] =  $row['name'];
 							$_SESSION['email'] =  $row['email'];
-							header("Location: admin_dashboard.php");
+							header("Location: student_dashboard.php");
 						}
 						else{
 							?>
@@ -240,10 +225,15 @@ padding-right: 5000px;
 							<?php
 						}
 					}
+					else
+					{
+						?>
+						<span>Wrong UserName !!</span>
+						<?php
+					}
 				}
-				
 			}
 		?>
-		
+	</center>
 </body>
 </html>
