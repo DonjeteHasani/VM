@@ -233,7 +233,7 @@ padding-right: 5000px;
 							$_SESSION['name'] =  $row['name'];
 							$_SESSION['email'] =  $row['email'];
 							// header("Location: admin_dashboard.php");
-							echo "<script>window.location.href='/admin_dashboard.php';";
+							echo "<script>window.location.href='../admin_dashboard.php';";
 						}
 						else{
 							?>
