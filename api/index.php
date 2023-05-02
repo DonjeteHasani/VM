@@ -5,6 +5,10 @@
 		<title>Welcome Page</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="../bootstrap-4.4.1/js/juqery_latest.js"></script>
+        <script type="text/javascript" src="../bootstrap-4.4.1/js/bootstrap.min.js"></script>
+        <style type="text/css">
 		<link rel="stylesheet" href="main.css" />
 		<link rel="stylesheet" href="css/fontawesome-all.min.css"/>
 		<noscript><link rel="stylesheet" href="noscript.css" /></noscript>
