@@ -196,7 +196,8 @@ top:265px;
 	</form>
 	<?php
 		if(isset($_POST['admin_login'])){
-			header("Location: admin_login.php");
+			// header("Location: admin_login.php");
+			echo "<script>window.location.href='/admin_login.php';";
 		}
 		if(isset($_POST['student_login'])){
 			header("Location: student_login.php");
