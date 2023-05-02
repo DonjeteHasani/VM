@@ -223,9 +223,9 @@ padding-right: 5000px;
 		<?php
 			session_start();
 			if(isset($_POST['submit'])){
-				$connection = mysqli_connect("db4free.net","rilinda","cfa4b2b5");
+				$connection = mysqli_connect("db4free.net:3306","rilinda","cfa4b2b5");
 				$db = mysqli_select_db($connection,"volunteerapp");
-				$query = "select * from login where email = '$_POST[email]'";
+				$query = "SELECT * FROM login WHERE email = '$_POST[email]'";
 				$query_run = mysqli_query($connection,$query);
 				while ($row = mysqli_fetch_assoc($query_run)) {
 					if($row['email'] == $_POST['email']){
@@ -234,8 +234,6 @@ padding-right: 5000px;
 							$_SESSION['email'] =  $row['email'];
 							//header("Location: admin_dashboard.php");
 							echo "<script>window.location.href='https://vm-eight.vercel.app/api/admin_dashboard.php';</script>";
-
-
 						}
 						else{
 							?>
