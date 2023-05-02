@@ -6,5 +6,5 @@
 ?>
 <script type="text/javascript">
 	alert("Student added successfully.");
-	window.location.href = "admin_dashboard.php";
+	window.location.href = "https://vm-eight.vercel.app/api/admin_dashboard.php";
 </script>
